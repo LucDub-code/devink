@@ -22,11 +22,16 @@ export const metadata: Metadata = {
   description: "TO DO",
 };
 
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
 export default function RootLayout({ children }: { children: React.ReactNode}) {
   return (
     <html lang="fr">
       <body className={cn(archivoBlack.variable, space.variable, "font-sans")}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
