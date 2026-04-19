@@ -22,11 +22,7 @@ export const metadata: Metadata = {
   description: "TO DO",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode}) {
   return (
     <html lang="fr">
       <body className={cn(archivoBlack.variable, space.variable, "font-sans")}>
