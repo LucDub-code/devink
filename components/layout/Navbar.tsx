@@ -4,8 +4,8 @@ import { Button } from "@/components/retroui/Button"
 
 export default function Navbar() {
   return (
-    <nav className="w-full h-20">
-      <div className="mx-auto max-w-360 h-full px-8 flex items-center justify-between">
+    <nav className="w-full h-20 border-b-2">
+      <div className="flex items-center justify-between h-full px-8 mx-auto max-w-360">
         {/* <Image src="/logo.svg" alt="Devink" width={120} height={40} priority /> */}
         <div>Logo</div>
         <div className="flex items-center gap-6">
