@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr">
       <body className={cn(archivoBlack.variable, space.variable, "font-sans bg-background")}>
-        <div className="max-w-360 mx-auto">
+        <div className="mx-auto max-w-360">
           <Navbar />
           {children}
           <Footer />

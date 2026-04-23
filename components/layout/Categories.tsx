@@ -9,7 +9,7 @@ export default function Categories() {
     ];
 
   return (
-    <section className="w-full h-180 bg-foreground grid grid-cols-3">
+    <section className="grid w-full grid-cols-3 h-160 bg-foreground">
       {categories.map((category) => (
         <Card key={category.label} className={`m-4 ${category.bg}`}></Card>
       ))}

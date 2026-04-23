@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="w-full h-180 grid grid-cols-2 items-stretch">
+    <section className="grid items-stretch w-full grid-cols-2 h-160">
       <div className="border-r-2 bg-purple"></div>
       <div className="bg-blue"></div>
     </section>
