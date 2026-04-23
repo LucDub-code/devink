@@ -1,6 +1,6 @@
 export default function Marquee() {
   return (
-    <div className="w-full h-20 bg-secondary">
+    <div className="w-full h-20 bg-foreground">
 
     </div>
   )
