@@ -12,9 +12,9 @@ export default function Categories() {
   ];
 
   return (
-    <section className="w-full h-160 bg-muted-foreground p-4">
-      <div className="w-full flex items-center justify-between px-4 my-8">
-        <Text as="h2">Catégories</Text>
+    <section className="w-full p-4 h-160 bg-muted-foreground">
+      <div className="flex items-center justify-between w-full px-4 my-8">
+        <Text as="h2" className="uppercase text-outline-foreground">Catégories</Text>
         <Button variant="secondary" className="">Voir tous les produits</Button>
       </div>
       <div className="grid grid-cols-3">
@@ -26,7 +26,7 @@ export default function Categories() {
               <div className="relative w-full aspect-square">
                 <Image src="/placeholder.jpg" fill className="object-cover" alt={category.label} />
               </div>
-              <Text as="h3" className="text-center mt-6 mb-4">{category.label}</Text>
+              <Text as="h3" className="mt-6 mb-4 text-center uppercase text-outline-foreground">{category.label}</Text>
             </Link>
           </Button>
         ))}
