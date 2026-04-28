@@ -1,14 +1,16 @@
 import Hero from "@/components/layout/Hero";
-import Marquee from "@/components/layout/Marquee";
+import Marquees from "@/components/layout/Marquees";
 import Categories from "@/components/layout/Categories";
 import About from "@/components/layout/About";
 import CallToAction from "@/components/layout/CallToAction";
 
 export default function Home() {
   return (
-    <div className="">
-      <Hero />
-      <Marquee />
+    <div className="overflow-x-hidden">
+      <div className="relative z-1">
+        <Hero />
+        <Marquees />
+      </div>
       <Categories />
       <About />
       <CallToAction />
