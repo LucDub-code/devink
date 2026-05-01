@@ -1,3 +1,10 @@
+"use client"
+
+import { useRef } from "react"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
+
+
 type MarqueeProps = {
   bgColor: string,
   borderColor: string,
@@ -9,6 +16,8 @@ type MarqueeProps = {
 }
 
 export default function Marquee({ bgColor, borderColor, textColor, children, translateY, rotation, zIndex }: MarqueeProps) {
+
+  const trackRef = useRef<HTMLDivElement>(null)
 
   return (
     <div 

@@ -1,4 +1,4 @@
-import Marquee from "@/components/ui/Marquee";
+import Marquee from "@/components/ui/Marquee"
 
 export default function Marquees() {
   return (

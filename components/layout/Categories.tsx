@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Text } from "../retroui/Text";
-import { Button } from "../retroui/Button";
+import Image from "next/image"
+import Link from "next/link"
+import { Text } from "../retroui/Text"
+import { Button } from "../retroui/Button"
 
 export default function Categories() {
 
@@ -9,7 +9,7 @@ export default function Categories() {
     { label: "Mugs", bg: "bg-pink", btnHoverColor: "hover:bg-pink" },
     { label: "Shirts", bg: "bg-lime", btnHoverColor: "hover:bg-lime" },
     { label: "Hoodies", bg: "bg-orange", btnHoverColor: "hover:bg-orange" },
-  ];
+  ]
 
   return (
     <section className="w-full p-4 h-160 bg-muted-foreground">

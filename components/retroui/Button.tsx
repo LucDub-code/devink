@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
-import { cva, VariantProps } from "class-variance-authority";
-import React, { ButtonHTMLAttributes } from "react";
-import { Slot } from "@radix-ui/react-slot";
+import { cn } from "@/lib/utils"
+import { cva, VariantProps } from "class-variance-authority"
+import React, { ButtonHTMLAttributes } from "react"
+import { Slot } from "@radix-ui/react-slot"
 
 export const buttonVariants = cva(
   "font-head transition-all rounded outline-hidden cursor-pointer duration-200 font-medium flex items-center",
@@ -29,12 +29,12 @@ export const buttonVariants = cva(
       variant: "default",
     },
   },
-);
+)
 
 export interface IButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
+  asChild?: boolean
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
@@ -49,7 +49,7 @@ export const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
     }: IButtonProps,
     forwardedRef,
   ) => {
-    const Comp = asChild ? Slot : "button";
+    const Comp = asChild ? Slot : "button"
     return (
       <Comp
         ref={forwardedRef}
@@ -58,8 +58,8 @@ export const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       >
         {children}
       </Comp>
-    );
+    )
   },
-);
+)
 
-Button.displayName = "Button";
+Button.displayName = "Button"
