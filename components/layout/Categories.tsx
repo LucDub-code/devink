@@ -13,7 +13,7 @@ export default function Categories() {
 
   return (
     <section className="w-full p-4 h-160 bg-muted-foreground">
-      <div className="flex items-center justify-between w-full px-4 mb-2 mt-8">
+      <div className="flex items-center justify-between w-full px-4 mt-8 mb-2">
         <Text as="h2" className="uppercase text-outline-foreground">Catégories</Text>
         <Button variant="secondary" className="">Voir tous les produits</Button>
       </div>
@@ -23,10 +23,10 @@ export default function Categories() {
             asChild size="lg" key={category.label} className={`m-4 ${category.bg} ${category.btnHoverColor}`}
           >
             <Link href="/" className="flex flex-col">
-              <div className="relative w-full aspect-square">
+              <div className="relative w-full mt-4 aspect-square">
                 <Image src="/placeholder.jpg" fill className="object-cover" alt={category.label} />
               </div>
-              <Text as="h3" className="mt-6 mb-4 text-center uppercase text-outline-foreground">{category.label}</Text>
+              <Text as="h3" className="mt-8 mb-4 text-center uppercase text-outline-foreground">{category.label}</Text>
             </Link>
           </Button>
         ))}
