@@ -19,13 +19,14 @@ type MarqueeProps = {
 export default function Marquee({ bgColor, borderColor, textColor, children, translateY, rotation, zIndex, animationDirection }: MarqueeProps) {
 
   const trackRef = useRef<HTMLDivElement>(null)
+  const tweenRef = useRef<gsap.core.Tween | null>(null)
 
   useGSAP(() => {
 
     const xFrom = animationDirection === "left" ? 0 : -50
     const xTo = animationDirection === "left" ? -50 : 0
 
-    gsap.fromTo(
+    tweenRef.current = gsap.fromTo(
       trackRef.current,
       { xPercent: xFrom },
       {
@@ -37,6 +38,16 @@ export default function Marquee({ bgColor, borderColor, textColor, children, tra
     )
   }, [animationDirection])
 
+  const handleMouseEnter = () => {
+    if (!tweenRef.current) return
+    gsap.to(tweenRef.current, { timeScale: 0, duration: 2, ease: "power2.out" })
+  }
+
+  const handleMouseLeave = () => {
+    if (!tweenRef.current) return
+    gsap.to(tweenRef.current, { timeScale: 1, duration: 2, ease: "power2.out" })
+  }
+
   return (
     <div 
       className={`relative w-[110%] -ml-[5%] h-20 border-y-2 ${bgColor} ${borderColor} ${textColor}`} 
@@ -45,6 +56,8 @@ export default function Marquee({ bgColor, borderColor, textColor, children, tra
         transformOrigin: "left",
         zIndex
       }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="overflow-hidden h-full flex items-center">
         <div ref={trackRef} className="flex whitespace-nowrap font-head text-lg">
