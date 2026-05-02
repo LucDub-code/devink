@@ -5,7 +5,7 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 type MarqueeProps = {
   bgColor: string,
@@ -18,71 +18,94 @@ type MarqueeProps = {
   animationDirection: "left" | "right"
 }
 
-export default function Marquee({ bgColor, borderColor, textColor, children, translateY, rotation, zIndex, animationDirection }: MarqueeProps) {
+export default function Marquee({ bgColor, borderColor, textColor, children, translateY, rotation, zIndex,
+  animationDirection }: MarqueeProps) {
 
   const trackRef = useRef<HTMLDivElement>(null)
-  const tweenRef = useRef<gsap.core.Tween | null>(null)
-  const lastDirectionRef = useRef(1)
+  const animationRef = useRef<gsap.core.Tween | null>(null)
+  const speedFactorsRef = useRef({ hover: 1, scroll: 1 })
+
+  const applyTimeScale = () => {
+    animationRef.current?.timeScale(speedFactorsRef.current.hover * speedFactorsRef.current.scroll)
+  }
 
   useGSAP(() => {
+
+    // Infinite marquee loop (target: the trackRef in the DOM)
 
     const xFrom = animationDirection === "left" ? 0 : -50
     const xTo = animationDirection === "left" ? -50 : 0
 
-    tweenRef.current = gsap.fromTo(
+    animationRef.current = gsap.fromTo(
       trackRef.current,
       { xPercent: xFrom },
-      {
-        xPercent: xTo,
-        duration: 20,
-        ease: "none",
-        repeat: -1
-      }
+      { xPercent: xTo, duration: 20, ease: "none", repeat: -1 }
     )
 
-    let resetCall: gsap.core.Tween | null = null
+    // Scroll reaction: boosts speed, then eases back to normal (target: stateRef.scroll)
 
-    ScrollTrigger.create({
+    let resetScroll: gsap.core.Tween | null = null
+
+    const scrollTrigger = ScrollTrigger.create({
+
       onUpdate: (self) => {
-        if (!tweenRef.current) return
 
         const velocity = self.getVelocity()
-        const scrollDirection = velocity >= 0 ? 1 : -1
+        if (Math.abs(velocity) < 50) return
+
         const boost = Math.min(Math.abs(velocity) / 500, 5)
 
-        lastDirectionRef.current = scrollDirection
+        gsap.to(speedFactorsRef.current, {
+          scroll: 1 + boost,
+          duration: 0.3,
+          onUpdate: applyTimeScale,
+          overwrite: "auto",
+        })
 
-        gsap.to(tweenRef.current, {
-           timeScale: scrollDirection * (1 + boost),
-           duration: 0.3,
-           overwrite: true, 
-          })
-
-          if (resetCall) resetCall.kill()
-          resetCall = gsap.delayedCall(0.3, () => {
-            if (tweenRef.current) {
-              gsap.to(tweenRef.current, { timeScale: lastDirectionRef.current, duration: 1 })
-            }
-          })
+        resetScroll?.kill()
+        resetScroll = gsap.to(speedFactorsRef.current, {
+          scroll: 1,
+          duration: 1,
+          delay: 0.3,
+          ease: "power2.out",
+          onUpdate: applyTimeScale,
+        })
       }
     })
 
-  }, [animationDirection])
+    return () => {
+      scrollTrigger.kill()
+      resetScroll?.kill()
+    }
+
+  }, [])
+
+  // Hover slowdown (target: stateRef.hover)
 
   const handleMouseEnter = () => {
-    if (!tweenRef.current) return
-    gsap.to(tweenRef.current, { timeScale: 0, duration: 2, ease: "power2.out" })
+    gsap.to(speedFactorsRef.current, {
+      hover: 0,
+      duration: 2,
+      ease: "power2.out",
+      onUpdate: applyTimeScale,
+      overwrite: "auto",
+    })
   }
 
   const handleMouseLeave = () => {
-    if (!tweenRef.current) return
-    gsap.to(tweenRef.current, { timeScale: lastDirectionRef.current, duration: 2, ease: "power2.out" })
+    gsap.to(speedFactorsRef.current, {
+      hover: 1,
+      duration: 2,
+      ease: "power2.out",
+      onUpdate: applyTimeScale,
+      overwrite: "auto",
+    })
   }
 
   return (
-    <div 
-      className={`relative w-[110%] -ml-[5%] h-20 border-y-2 ${bgColor} ${borderColor} ${textColor}`} 
-      style={{ 
+    <div
+      className={`relative w-[110%] -ml-[5%] h-20 border-y-2 ${bgColor} ${borderColor} ${textColor}`}
+      style={{
         transform: `translateY(${translateY}px) rotate(${rotation}deg)`,
         transformOrigin: "left",
         zIndex
@@ -92,7 +115,7 @@ export default function Marquee({ bgColor, borderColor, textColor, children, tra
     >
       <div className="flex items-center h-full overflow-hidden">
         <div ref={trackRef} className="flex text-lg whitespace-nowrap font-head">
-          {[0,1].map((i) => (
+          {[0, 1].map((i) => (
             <div key={i} className="flex items-center gap-4 pr-4 shrink-0" aria-hidden={i > 0}>
               {children}
             </div>
