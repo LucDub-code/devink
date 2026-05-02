@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="w-full grid grid-cols-2">
+    <section className="w-full grid grid-cols-2">
       <div className="h-120 flex items-center justify-center text-foreground">Concept du shop</div>
       <div className="h-120 flex items-center justify-center bg-purple border-t"></div>
       <div className="h-120 flex items-center justify-center bg-lime"></div>
@@ -9,6 +9,6 @@ export default function About() {
       <div className="h-120 flex items-center justify-center bg-pink"></div>
       <div className="h-120 flex items-center justify-center bg-blue border-b"></div>
       <div className="h-120 flex items-center justify-center text-foreground">Clash of Backends</div>
-    </div>
+    </section>
   )
 }

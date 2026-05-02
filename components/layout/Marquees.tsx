@@ -2,7 +2,7 @@ import Marquee from "@/components/ui/Marquee"
 
 export default function Marquees() {
   return (
-    <div className="absolute inset-x-0 bottom-0">
+    <div className="absolute inset-x-0 bottom-0" aria-hidden="true">
       <Marquee
         bgColor="bg-lime" 
         borderColor="border-background"

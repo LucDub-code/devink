@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function Cart() {
   return (
-    <Button size="icon">
+    <Button size="icon" aria-label="Cart">
       <Image src="/icons/cart.svg" alt="Cart" width={20} height={20} />
     </Button>
   )
