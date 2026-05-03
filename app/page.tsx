@@ -7,7 +7,7 @@ import Reassurance from "@/components/layout/Reassurance"
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
-      <div className="relative z-1">
+      <div className="relative z-0">
         <Hero />
         <Marquees />
       </div>
