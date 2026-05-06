@@ -7,7 +7,7 @@ export default function Marquees() {
         bgColor="bg-lime" 
         borderColor="border-background"
         textColor="text-background"
-        translateY={20}
+        translateY={70}
         rotation={-1}
         zIndex={3}
         animationDirection="right"
@@ -27,7 +27,7 @@ export default function Marquees() {
         bgColor="bg-background" 
         borderColor="border-foreground" 
         textColor="text-foreground"
-        translateY={0}
+        translateY={50}
         rotation={1} 
         zIndex={2}
         animationDirection="left"

@@ -12,8 +12,8 @@ export default function Categories() {
   ]
 
   return (
-    <section className="w-full p-4 h-160 bg-muted-foreground">
-      <div className="flex items-center justify-between w-full px-4 mt-8 mb-2">
+    <section className="w-full p-4 h-170 bg-muted-foreground">
+      <div className="flex items-center justify-between w-full px-4 mt-18 mb-2">
         <Text as="h2" className="uppercase text-outline-foreground">Catégories</Text>
         <Button variant="secondary" className="">Voir tous les produits</Button>
       </div>
