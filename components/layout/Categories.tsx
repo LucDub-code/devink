@@ -12,7 +12,7 @@ export default function Categories() {
   ]
 
   return (
-    <section className="w-full p-4 h-180 bg-muted-foreground">
+    <section className="w-full p-4 h-180 bg-muted-foreground bg-[url(/grids/grid-perspective-horizon.svg)] bg-no-repeat bg-cover bg-center">
       <div className="flex items-center justify-between w-full px-4 mt-24 mb-2">
         <Text as="h2" className="uppercase text-outline-foreground">Catégories</Text>
         <Button variant="secondary" className="">Voir tous les produits</Button>
