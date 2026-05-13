@@ -29,9 +29,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr">
       <body className={cn(archivoBlack.variable, space.variable, "font-sans bg-background")}>
-        <div className="mx-auto max-w-360">
+        <div className="flex flex-col min-h-screen mx-auto max-w-360">
           <Navbar />
-          <main>{children}</main>
+          <main className="flex flex-col grow">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

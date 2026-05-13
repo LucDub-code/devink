@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="h-26 bg-foreground">
       <div className="w-full h-full flex justify-around">
-        <div className="h-full flex items-center text-center py-4">
+        <div className="h-full flex items-center text-center py-4 -translate-x-28">
           <p>© 2026 Devink</p>
         </div>
         <nav aria-label="footer">
@@ -33,7 +33,7 @@ export default function Footer() {
           width={80}
           height={80}
           priority
-          className="translate-x-16"
+          className="translate-x-32"
         />
       </div>
     </footer>
