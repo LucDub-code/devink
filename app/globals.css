@@ -14,6 +14,7 @@
     --shadow-white: 4px 4px 0 0 var(--foreground);
     --shadow-white-sm: 2px 2px 0 0 var(--foreground);
     --shadow-lg: 6px 6px 0 0 var(--border);
+    --shadow-lime: 6px 6px 0 0 var(--primary);
     --shadow-xl: 10px 10px 0 1px var(--border);
     --shadow-2xl: 16px 16px 0 1px var(--border);
 

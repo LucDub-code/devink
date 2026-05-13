@@ -1,13 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Text } from "../retroui/Text"
-import { Button } from "../retroui/Button"
+import { Text } from "@/components/retroui/Text"
+import { Button } from "@/components/retroui/Button"
 
 export default function Categories() {
 
   const categories = [
     { label: "Mugs", bg: "bg-pink", btnHoverColor: "hover:bg-pink" },
-    { label: "Shirts", bg: "bg-lime", btnHoverColor: "hover:bg-lime" },
+    { label: "T-shirts", bg: "bg-lime", btnHoverColor: "hover:bg-lime" },
     { label: "Hoodies", bg: "bg-orange", btnHoverColor: "hover:bg-orange" },
   ]
 
