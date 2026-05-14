@@ -18,6 +18,9 @@
     --shadow-xl: 10px 10px 0 1px var(--border);
     --shadow-2xl: 16px 16px 0 1px var(--border);
 
+    --drop-shadow-md: 4px 4px 0 var(--border);
+    --drop-shadow-lg: 6px 6px 0 var(--border);
+
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-primary: var(--primary);

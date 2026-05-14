@@ -30,8 +30,8 @@ export default function Footer() {
         <Image 
           src="/logos/logo-drop.svg"
           alt="logo drop"
-          width={80}
-          height={80}
+          width={60}
+          height={60}
           priority
           className="translate-x-32"
         />
