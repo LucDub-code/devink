@@ -1,4 +1,5 @@
 import Card from "@/components/ui/Card"
+import BrowserMockup from "../ui/BrowserMockup"
 
 const cards = [
   { id: 0, background: "bg-orange", scale: 0.7, hoverScale: 0.8, zIndex: "z-40", translateY: -170, translateX: 140, rotate: 8 },
@@ -9,7 +10,9 @@ const cards = [
 export default function Hero() {
   return (
     <section className="grid items-stretch w-full grid-cols-2 h-180">
-      <div className="border-r-2 bg-purple"></div>
+      <div className="border-r-2 bg-purple flex items-center justify-center">
+        <BrowserMockup />
+      </div>
       <div className="relative flex items-center justify-center bg-blue">
         {cards.map(card => (
           <Card
