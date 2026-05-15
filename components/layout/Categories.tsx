@@ -14,7 +14,7 @@ export default function Categories() {
   return (
     <section className="w-full p-4 h-180 bg-muted-foreground bg-[url(/grids/grid-perspective-horizon.svg)] bg-no-repeat bg-cover bg-center">
       <div className="flex items-center justify-between w-full px-4 mt-24 mb-2">
-        <Text as="h2" className="uppercase text-outline-foreground">Catégories</Text>
+        <Text as="h2" variant="h2" className="uppercase text-outline-foreground">Catégories</Text>
         <Button variant="secondary" className="">Voir tous les produits</Button>
       </div>
       <div className="grid grid-cols-3">
@@ -26,7 +26,7 @@ export default function Categories() {
               <div className="relative w-full mt-4 aspect-square">
                 <Image src="/placeholder.jpg" fill className="object-cover" alt={category.label} />
               </div>
-              <Text as="h3" className="mt-8 mb-4 text-center uppercase text-outline-foreground">{category.label}</Text>
+              <Text as="h3" variant="h3" className="mt-8 mb-4 text-center uppercase text-outline-foreground">{category.label}</Text>
             </Link>
           </Button>
         ))}
