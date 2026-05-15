@@ -9,7 +9,7 @@ export default function ProductFilter() {
   const designs = ["JS-Sphere", "CaSScade", "Clash of Backends", "Devink"]
 
   return (
-    <div className="col-span-1 px-8 py-4 border-2 bg-background w-70 border-background shadow-lime text-foreground">
+    <div className="col-span-1 px-8 py-4 border-2 bg-background w-70 h-fit border-background shadow-lime text-foreground mr-8">
       <Text as="h3" className="mb-8">Categories</Text>
       <ul className="space-y-4 pb-8">
         {categories.map((category) => (

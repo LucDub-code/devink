@@ -12,7 +12,7 @@ export default function Navbar() {
             width={600}
             height={300}
             priority
-            className="h-40 w-auto"
+            className="h-40 w-auto -translate-x-4"
           />
         </div>
         <div className="flex items-center gap-6">

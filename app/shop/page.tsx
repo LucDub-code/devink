@@ -7,9 +7,9 @@ export default function ShopPage() {
   return (
     <div className="flex flex-col grow">
       <ShopHeader />
-      <div className="bg-muted-foreground grow grid grid-cols-4 p-4">
+      <div className="bg-muted-foreground grow grid grid-cols-[auto_1fr] p-8">
         <ProductFilter />
-        <div className="col-span-3">
+        <div>
           <ProductSort />
           <ProductGrid />
         </div>

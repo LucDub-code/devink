@@ -8,7 +8,7 @@ export default function ProductSort() {
   const [sort, setSort] = useState<string | undefined>(undefined)
 
   return (
-    <div className="flex items-center justify-end h-12 mb-4">
+    <div className="flex items-center justify-end h-12 mb-8">
       <Select value={sort} onValueChange={setSort}>
         <Select.Trigger>
           <Select.Value placeholder="Trier par" />
