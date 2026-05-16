@@ -6,9 +6,9 @@ import { Button } from "@/components/retroui/Button"
 export default function Categories() {
 
   const categories = [
-    { label: "Mugs", bg: "bg-pink", btnHoverColor: "hover:bg-pink" },
-    { label: "T-shirts", bg: "bg-lime", btnHoverColor: "hover:bg-lime" },
-    { label: "Hoodies", bg: "bg-orange", btnHoverColor: "hover:bg-orange" },
+    { label: "Mugs", bg: "bg-pink", btnHoverColor: "hover:bg-pink", imageUrl: "https://res.cloudinary.com/dwblp4axc/image/upload/v1778943510/category-black-mug_x7jkxw.png" },
+    { label: "T-shirts", bg: "bg-lime", btnHoverColor: "hover:bg-lime", imageUrl: "https://res.cloudinary.com/dwblp4axc/image/upload/v1778943417/category-black-shirt_gxggab.png" },
+    { label: "Hoodies", bg: "bg-orange", btnHoverColor: "hover:bg-orange", imageUrl: "https://res.cloudinary.com/dwblp4axc/image/upload/v1778940595/category-black-hoodie_sdp4du.png" },
   ]
 
   return (
@@ -24,7 +24,7 @@ export default function Categories() {
           >
             <Link href="/" className="flex flex-col">
               <div className="relative w-full mt-4 aspect-square">
-                <Image src="/placeholder.jpg" fill className="object-cover" alt={category.label} />
+                <Image src={category.imageUrl} fill className="object-cover" alt={category.label} />
               </div>
               <Text as="h3" variant="h3" className="mt-8 mb-4 text-center uppercase text-outline-foreground">{category.label}</Text>
             </Link>
