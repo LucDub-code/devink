@@ -1,5 +1,4 @@
-import { Button } from "@/components/retroui/Button"
-import Link from "next/link"
+import ButtonCTA from "./ButtonCTA"
 import Image from "next/image"
 
 export default function BrowserMockup() {
@@ -13,9 +12,12 @@ export default function BrowserMockup() {
       <div className="flex flex-col justify-between flex-1 p-8">
         <div>{/* texte / future anim GSAP */}</div>
         <div className="flex justify-end">
-          <Button asChild size="lgSans" className="shadow-lg bg-lime w-fit">
-            <Link href="/shop" className="uppercase">Voir la boutique</Link>
-          </Button>
+          <ButtonCTA href="/shop">
+            Voir la boutique
+            <Image 
+              src="/icons/arrow-right.svg" alt="arrow right" width={42} height={32}
+            />
+          </ButtonCTA>
         </div>
       </div>
       <Image
@@ -32,7 +34,7 @@ export default function BrowserMockup() {
         width={120}
         height={120}
         priority
-        className="absolute -rotate-12 bottom-0 left-8 drop-shadow-lg"
+        className="absolute -rotate-12 bottom-0 left-2 drop-shadow-lg"
       />
     </div>
   )

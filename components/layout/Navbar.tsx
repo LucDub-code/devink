@@ -18,7 +18,7 @@ export default function Navbar() {
         </Link>
         <div className="flex items-center gap-6">
           <Cart />
-          <Button>Connexion</Button>
+          <Button>Connexion</Button> 
         </div>
       </div>
     </nav>
