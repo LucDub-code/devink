@@ -2,8 +2,12 @@ import ShopHeader from "@/components/shop/ShopHeader"
 import ProductFilter from "@/components/shop/ProductFilter"
 import ProductSort from "@/components/shop/ProductSort"
 import ProductGrid from "@/components/shop/ProductGrid"
+import { getProducts } from "@/lib/products"
 
-export default function ShopPage() {
+export default async function ShopPage() {
+
+  const products = await getProducts()
+
   return (
     <div className="flex flex-col grow">
       <ShopHeader />
@@ -11,7 +15,7 @@ export default function ShopPage() {
         <ProductFilter />
         <div>
           <ProductSort />
-          <ProductGrid />
+          <ProductGrid products={products} />
         </div>
       </div>
     </div>

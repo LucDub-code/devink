@@ -1,7 +1,7 @@
 "use client"
 
 type Color = {
-  name: string
+  color: string
   bgClass: string
 }
 
@@ -14,17 +14,17 @@ type ColorSelectorProps = {
 export default function ColorSelector({ colors, selectedColor, onSelectColor }: ColorSelectorProps) {
   return (
     <div className="flex flex-col h-full w-8">
-      {colors.map((color, index) => (
+      {colors.map(({ color, bgClass }, index) => (
         <button
-          key={color.name}
-          onClick={() => onSelectColor(color.name)}
-          aria-label={`Sélectionner ${color.name}`}
+          key={color}
+          onClick={() => onSelectColor(color)}
+          aria-label={`Sélectionner ${color}`}
           className={`
             flex-1 cursor-pointer transition-all
-            ${color.bgClass}
-            ${selectedColor === color.name ? "ring-6 ring-inset ring-lime" : "border-2 border-background"}
-            ${index !== colors.length - 1 && selectedColor !== color.name ? "border-b-transparent" : ""}
-            ${index > 0 && colors[index - 1]?.name === selectedColor ? "border-t-transparent" : ""}
+            ${bgClass}
+            ${selectedColor === color ? "ring-6 ring-inset ring-lime" : "border-2 border-background"}
+            ${index !== colors.length - 1 && selectedColor !== color ? "border-b-transparent" : ""}
+            ${index > 0 && colors[index - 1]?.color === selectedColor ? "border-t-transparent" : ""}
           `}
         />
       ))}
