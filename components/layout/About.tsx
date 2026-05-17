@@ -1,14 +1,14 @@
 export default function About() {
   return (
-    <section className="w-full grid grid-cols-2">
-      <div className="h-120 flex items-center justify-center text-foreground">Concept du shop</div>
-      <div className="h-120 flex items-center justify-center bg-purple border-t"></div>
-      <div className="h-120 flex items-center justify-center bg-lime"></div>
-      <div className="h-120 flex items-center justify-center text-foreground">JS-Sphere</div>
-      <div className="h-120 flex items-center justify-center text-foreground">CaSScade</div>
-      <div className="h-120 flex items-center justify-center bg-pink"></div>
-      <div className="h-120 flex items-center justify-center bg-blue border-b"></div>
-      <div className="h-120 flex items-center justify-center text-foreground">Clash of Backends</div>
+    <section className="grid w-full grid-cols-2">
+      <div className="flex items-center justify-center h-120 text-foreground">Concept du shop</div>
+      <div className="flex items-center justify-center border-t h-120 bg-purple"></div>
+      <div className="flex items-center justify-center h-120 bg-lime"></div>
+      <div className="flex items-center justify-center h-120 text-foreground">JS-Sphere</div>
+      <div className="flex items-center justify-center h-120 text-foreground">CaSScade</div>
+      <div className="flex items-center justify-center h-120 bg-pink"></div>
+      <div className="flex items-center justify-center border-b h-120 bg-blue"></div>
+      <div className="flex items-center justify-center h-120 text-foreground">Clash of Backends</div>
     </section>
   )
 }

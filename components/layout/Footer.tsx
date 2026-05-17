@@ -4,12 +4,12 @@ import Image from "next/image"
 export default function Footer() {
   return (
     <footer className="h-20 bg-foreground">
-      <div className="w-full h-full flex justify-around">
-        <div className="h-full flex items-center text-center py-4 -translate-x-28">
+      <div className="flex justify-around w-full h-full">
+        <div className="flex items-center h-full py-4 text-center -translate-x-28">
           <p>© 2026 Devink</p>
         </div>
         <nav aria-label="footer">
-          <ul className="h-full flex justify-center items-center gap-4">
+          <ul className="flex items-center justify-center h-full gap-4">
             <li>
               <Link href="/legal" className="hover:underline">
                 Mentions légales

@@ -10,7 +10,7 @@ type ProductCardProps = {
 
 export default function ProductCard({ title, price, images }: ProductCardProps) {
   return (
-    <article className="flex-1 transition-all duration-200 border-y-2 border-r-2 disabled:cursor-pointer bg-foreground outline-hidden">
+    <article className="flex-1 transition-all duration-200 border-r-2 border-y-2 disabled:cursor-pointer bg-foreground outline-hidden">
       <ImageCarousel images={images} />
       <Link href="/shop" className="block px-4 pb-4">
         <div className="flex items-center justify-between">

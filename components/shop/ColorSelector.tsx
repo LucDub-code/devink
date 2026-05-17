@@ -13,7 +13,7 @@ type ColorSelectorProps = {
 
 export default function ColorSelector({ colors, selectedColor, onSelectColor }: ColorSelectorProps) {
   return (
-    <div className="flex flex-col h-full w-8">
+    <div className="flex flex-col w-8 h-full">
       {colors.map(({ color, bgClass }, index) => (
         <button
           key={color}

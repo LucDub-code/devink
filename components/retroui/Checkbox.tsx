@@ -43,8 +43,8 @@ export const Checkbox = ({
     )}
     {...props}
   >
-    <CheckboxPrimitive.Indicator className="h-full w-full">
-      <Check className="h-full w-full" />
+    <CheckboxPrimitive.Indicator className="w-full h-full">
+      <Check className="w-full h-full" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 )

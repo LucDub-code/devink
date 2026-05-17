@@ -34,7 +34,7 @@ export default function BrowserMockup() {
         width={120}
         height={120}
         priority
-        className="absolute -rotate-12 bottom-0 left-0 drop-shadow-lg"
+        className="absolute bottom-0 left-0 -rotate-12 drop-shadow-lg"
       />
     </div>
   )

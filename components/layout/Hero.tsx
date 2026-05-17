@@ -10,7 +10,7 @@ const cards = [
 export default function Hero() {
   return (
     <section className="grid items-stretch w-full grid-cols-2 h-180">
-      <div className="border-r-2 bg-purple flex items-center justify-center">
+      <div className="flex items-center justify-center border-r-2 bg-purple">
         <BrowserMockup />
       </div>
       <div className="relative flex items-center justify-center bg-blue">
