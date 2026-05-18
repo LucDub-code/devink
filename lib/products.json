@@ -1,0 +1,111 @@
+[
+  {
+    "slug": "t-shirt-test",
+    "title": "T-shirt test",
+    "price": 29.99,
+    "variants": [
+      {
+        "color": "black",
+        "colorLabel": "Noir",
+        "bgClass": "bg-background",
+        "images": [
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1778943555/front-black-shirt_sx0gau.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1778943558/three-quarter-black-shirt_xx7o9h.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1778943552/back-black-shirt_qhy08f.png"
+        ]
+      },
+      {
+        "color": "white",
+        "colorLabel": "Blanc",
+        "bgClass": "bg-muted",
+        "images": [
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1778943557/front-white-shirt_xbywzw.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1778943561/three-quarter-white-shirt_rithwe.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1778943553/back-white-shirt_soc1xm.png"
+        ]
+      },
+      {
+        "color": "grey",
+        "colorLabel": "Gris",
+        "bgClass": "bg-gray-400",
+        "images": [
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1778943556/front-grey-shirt_lrk76h.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1778943559/three-quarter-grey-shirt_mggc4m.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1778943553/back-grey-shirt_uxuepk.png"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hoodie-test",
+    "title": "Hoodie test",
+    "price": 49.99,
+    "variants": [
+      {
+        "color": "black",
+        "colorLabel": "Noir",
+        "bgClass": "bg-background",
+        "images": [
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110389/front-black-hoodie_k1l3ra.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110391/three-quarter-black-hoodie_s7sb4j.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110387/back-black-hoodie_mhyo9c.png"
+        ]
+      },
+      {
+        "color": "white",
+        "colorLabel": "Blanc",
+        "bgClass": "bg-muted",
+        "images": [
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110389/front-white-hoodie_qkvlkk.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110392/three-quarter-white-hoodie_fduwoy.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110387/back-white-hoodie_u2k8w4.png"
+        ]
+      },
+      {
+        "color": "grey",
+        "colorLabel": "Gris",
+        "bgClass": "bg-gray-400",
+        "images": [
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110388/front-grey-hoodie_f7zao2.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110391/three-quarter-grey-hoodie_r1cikt.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110387/back-grey-hoodie_byuc08.png"
+        ]
+      },
+      {
+        "color": "beige",
+        "colorLabel": "Beige",
+        "bgClass": "bg-amber-100",
+        "images": [
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110388/front-beige-hoodie_ktqlyp.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110391/three-quarter-beige-hoodie_uzbjsf.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110387/back-beige-hoodie_dlxahn.png"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "mug-test",
+    "title": "Mug test",
+    "price": 14.99,
+    "variants": [
+      {
+        "color": "black",
+        "colorLabel": "Noir",
+        "bgClass": "bg-background",
+        "images": [
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110431/black-mug-1_spcsa5.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110431/black-mug-2_ksvdjt.png"
+        ]
+      },
+      {
+        "color": "white",
+        "colorLabel": "Blanc",
+        "bgClass": "bg-muted",
+        "images": [
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110433/white-mug-1_wqb3hl.png",
+          "https://res.cloudinary.com/dwblp4axc/image/upload/v1779110433/white-mug-2_ceyhot.png"
+        ]
+      }
+    ]
+  }
+]
