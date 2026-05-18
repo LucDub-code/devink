@@ -1,15 +1,25 @@
 "use client"
 
-import { useState } from "react"
+import { useRouter, useSearchParams, usePathname } from "next/navigation"
 import { Select } from "@/components/retroui/Select"
 
 export default function ProductSort() {
 
-  const [sort, setSort] = useState<string | undefined>(undefined)
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  const sort = searchParams.get("sort") ?? undefined
+
+  const handleSortChange = (value: string) => {
+    const params = new URLSearchParams(searchParams.toString())
+    params.set("sort", value)
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false })
+  }
 
   return (
     <div className="flex items-center justify-end h-12 mb-8">
-      <Select value={sort} onValueChange={setSort}>
+      <Select value={sort} onValueChange={handleSortChange}>
         <Select.Trigger>
           <Select.Value placeholder="Trier par" />
         </Select.Trigger>
