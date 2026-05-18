@@ -4,7 +4,7 @@
     "title": "T-shirt test",
     "price": 29.99,
     "category": "t-shirts",
-    "design": "Test",
+    "design": "test",
     "variants": [
       {
         "color": "black",
@@ -43,7 +43,7 @@
     "title": "Hoodie test",
     "price": 49.99,
     "category": "hoodies",
-    "design": "Test",
+    "design": "test",
     "variants": [
       {
         "color": "black",
@@ -92,7 +92,7 @@
     "title": "Mug test",
     "price": 14.99,
     "category": "mugs",
-    "design": "Test",
+    "design": "test",
     "variants": [
       {
         "color": "black",
