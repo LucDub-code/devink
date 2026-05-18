@@ -3,6 +3,8 @@
     "slug": "t-shirt-test",
     "title": "T-shirt test",
     "price": 29.99,
+    "category": "t-shirts",
+    "design": "Test",
     "variants": [
       {
         "color": "black",
@@ -40,6 +42,8 @@
     "slug": "hoodie-test",
     "title": "Hoodie test",
     "price": 49.99,
+    "category": "hoodies",
+    "design": "Test",
     "variants": [
       {
         "color": "black",
@@ -87,6 +91,8 @@
     "slug": "mug-test",
     "title": "Mug test",
     "price": 14.99,
+    "category": "mugs",
+    "design": "Test",
     "variants": [
       {
         "color": "black",

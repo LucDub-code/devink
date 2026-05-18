@@ -6,7 +6,7 @@ import { Text } from "@/components/retroui/Text"
 export default function ProductFilter() {
 
   const categories = ["T-shirts", "Hoodies", "Mugs"]
-  const designs = ["JS-Sphere", "CaSScade", "Clash of Backends", "Devink"]
+  const designs = ["JS-Sphere", "CaSScade", "Clash of Backends", "Devink", "Test"]
 
   return (
     <div className="col-span-1 px-8 py-4 mr-8 border-2 bg-background w-70 h-fit border-background shadow-lime text-foreground">

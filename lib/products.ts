@@ -12,6 +12,8 @@ export type Product = {
   slug: string
   title: string
   price: number
+  category: string
+  design: string
   variants: Variant[]
 }
 
